@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+    margin-top: 100px;
+    background-color: #F4F0DB;
+    color: black;
+    font-family: "Reenie Beanie", cursive;
+    font-size: 100px;
+    font-weight: 500;
+    height: 100vh;
+    width: 100vh;
+}
+
+section {
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+}
+
+div {
+}
+
+.topLeft {
+
+}
+
+.topLeft:hover {
+    transform: translateX(50px);
+
+}

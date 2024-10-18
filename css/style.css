@@ -6,6 +6,13 @@
 }
 
 
+
+/* animation-name: 
+animation-delay: 
+animation-direction: 
+animation-duration: 
+ */
+
 body{
     margin-top: 100px;
     background-color: #F4F0DB;
@@ -13,22 +20,89 @@ body{
     font-family: "Reenie Beanie", cursive;
     font-size: 100px;
     font-weight: 500;
-    height: 100vh;
-    width: 100vh;
 }
 
 section {
+    margin-top: 150px;
     margin-left: 50px;
-    margin-right: 50px;
+    height: 100vh;
+    width: 100vh;
     position: relative;
-    font-size: 100px;
 }
 
 
 .topLeft {
+    position: absolute;
+    transform: translate(0,- 30px);
+    animation-name: leftfadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.center{
+    opacity: 0;
+    position: absolute;
+    transform: translate(75px, 100px);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 5px solid;
+    animation: 
+        typing 3s steps(10, end) 3s forwards,
+        blinking 500ms steps(10) infinite,
+        centerfadeIn 1s forwards;
+    animation-delay: 3s;
+   /*  background-color: aqua; */
 
 }
 
-.topLeft:hover {
-    transform: translate(50px);
+
+
+.bottom {
+    position: absolute;
+    transform: translate(75px, 200px);
+   
+}
+
+
+
+
+/* Keyframes */
+
+@keyframes leftfadeIn {
+   from {
+    opacity: 0;
+   }
+    to {
+    opacity: 1;
+   }
+}
+
+/* blinking */
+
+@keyframes typing {
+    width {
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
+}
+
+  
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes centerfadeIn {
+    from {
+        opacity: 0;
+       }
+    to {
+        opacity: 1;
+       }
 }

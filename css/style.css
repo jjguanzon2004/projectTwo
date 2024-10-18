@@ -53,18 +53,37 @@ section {
         typing 3s steps(10, end) 3s forwards,
         blinking 500ms steps(10) infinite,
         centerfadeIn 1s forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
    /*  background-color: aqua; */
-
 }
-
 
 
 .bottom {
+    opacity: 0;
     position: absolute;
     transform: translate(75px, 200px);
-   
+    animation-name: centerfadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
 }
+
+
+.real {
+    display: inline-block;
+    color: firebrick;
+    transition-property: all;
+    transition-duration: 5s;
+    transition-timing-function: ease;
+}
+
+.real:hover {
+    transform: translate(90px, 50px) scale(1.25);
+    letter-spacing: .125em;
+
+}
+
 
 
 
@@ -80,7 +99,6 @@ section {
    }
 }
 
-/* blinking */
 
 @keyframes typing {
     width {
@@ -101,8 +119,18 @@ section {
 @keyframes centerfadeIn {
     from {
         opacity: 0;
-       }
+    }
     to {
         opacity: 1;
-       }
+    }
+}
+
+
+@keyframes bottomfadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

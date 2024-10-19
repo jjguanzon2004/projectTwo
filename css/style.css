@@ -30,6 +30,13 @@ section {
     position: relative;
 }
 
+.messageRight {
+   position: relative;
+   height: 100vh;
+   width: 100vh;
+   text-align: right;
+}
+
 
 .topLeft {
     position: absolute;
@@ -81,7 +88,63 @@ section {
 .real:hover {
     transform: translate(90px, 50px) scale(1.25);
     letter-spacing: .125em;
+}
 
+
+/* pageTwo */
+
+.one {
+    position: absolute;
+    opacity: 0%;
+    right: -100%;
+    transform: translateX(-50px);
+    animation:
+        fade-from-right 1s ease-in 1s forwards;
+}
+
+
+.two {
+    position: absolute;
+    opacity: 0;
+    right: -100%;
+    margin-top: 100px;
+    transform: translate(-50px);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 5px solid;
+    animation: 
+        blinking 500ms steps(10) infinite,
+        typing 3s steps(10, end) 3s forwards,
+        centerfadeIn 1s forwards;
+    animation-delay: 2s;
+}
+
+.three {
+    position: absolute;
+    /* opacity: 0; */
+    right: -100%;
+    margin-top: 250px;
+    transform: translate(-50px);
+    animation: 
+        
+}
+
+
+.four {
+    position: absolute;
+    /* opacity: 0; */
+    right: -100%;
+    margin-top: 400px;
+    transform: translate(-150px);
+}
+
+
+.five {
+    position: absolute;
+    /* opacity: 0; */
+    right: -100%;
+    margin-top: 550px;
+    transform: translate(-50px);
 }
 
 
@@ -127,6 +190,17 @@ section {
 
 
 @keyframes bottomfadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* pageTwo keyframes*/
+
+@keyframes fade-from-right {
     from {
         opacity: 0;
     }

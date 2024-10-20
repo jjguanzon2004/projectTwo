@@ -37,6 +37,19 @@ section {
    text-align: right;
 }
 
+.page5section {
+    position: relative;
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    animation: 
+        expandPage 5s ease 6s forwards;
+    /* background-color: aquamarine; */
+}
+
 
 .topLeft {
     position: absolute;
@@ -150,7 +163,7 @@ section {
 }
 
 .rightDone {
-    background-color: aqua;
+    /* background-color: aqua; */
     display: inline-block;
     color: firebrick;
     transition-property: all;
@@ -180,6 +193,7 @@ section {
     letter-spacing: 50px;
     animation-name: closeIn;
     animation-duration: 7s;
+    animation-fill-mode: forwards;
     animation-delay: 3s;
 }
 
@@ -199,6 +213,118 @@ section {
     animation-delay: 7s;
 }       
 
+/* pageFour */
+
+.she {
+    position: absolute;
+    transform: translate(0,- 30px);
+    animation-name: leftfadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.easy {
+    opacity: 0;
+    position: absolute;
+    transform: translate(75px, 100px);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 5px solid;
+    animation: 
+        typing 3s steps(10, end) 3s forwards,
+        blinking 500ms steps(10) infinite,
+        centerfadeIn 1s forwards;
+    animation-delay: 2s;
+}
+
+.said {
+    position: absolute;
+    margin-top: 250px;
+    left: -200px;
+    animation: 
+        leftSlide 1s ease-in 5s forwards;
+}
+
+
+.than {
+    position: absolute;
+    margin-top:  400px;
+    transform: translateX(1400px);
+    animation: 
+        rightSlide 1s ease-in 6s forwards;
+}
+
+.done {
+    position: absolute;
+    margin-top: 550px;
+    left: -240px;
+    animation: 
+        leftSlide 1s ease-in 7s forwards;
+}
+
+/* pageFive */
+
+
+.scaleCenter {
+    position: absolute;
+    margin-top: 100px;
+    opacity: 0;
+    transform: scale(3);
+    animation: 
+        shrink-move 2s ease-in-out 3s forwards,
+        fade-center 1s ease-in forwards;
+}
+
+.cause {
+    opacity: 0;
+    position: absolute;
+    margin-top: 200px;
+    animation: 
+        fade-center 1s ease-in 5s forwards
+}
+
+.true {
+    opacity: 0;
+    position: absolute;
+    margin-top: 400px;
+    animation: 
+        fade-center 1s ease-in 6s forwards
+}
+
+.love {
+    opacity: 0;
+    position: absolute;
+    margin-top: 600px;
+    animation: 
+        fade-center 1s ease-in 7s forwards
+}
+
+.it {
+    opacity: 0;
+    position: absolute;
+    margin-top: 800px;
+    animation: 
+        fade-center 1s ease-in 8s forwards
+}
+
+.aint {
+    opacity: 0;
+    position: absolute;
+    margin-top: 1000px;
+    animation: 
+        fade-center 1s ease-in 9s forwards
+}   
+
+.last {
+    opacity: 0;
+    position: absolute;
+    margin-top: 1200px;
+    animation: 
+        fade-center 1s ease-in 10s forwards
+}
 
                     /* Keyframes */
 
@@ -304,3 +430,55 @@ section {
         opacity: 1;
     }
 }
+
+/* keyframes pageFour */
+
+@keyframes leftSlide {
+    0% {
+        transform: translateX(-300px);
+    }
+    100% {
+        transform: translateX(330px);
+    }
+}
+
+@keyframes rightSlide {
+    0% {
+        transform: translateX(1400px);
+    }
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+
+/* keyframes pageFive */
+
+@keyframes expandPage {
+    0% {
+        height: 100vh
+    }
+    100% {
+        height: 300vh
+    }
+}
+
+
+@keyframes fade-center {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shrink-move {
+    0% {
+        transform: scale(3) translateY(0);
+    }
+    100% {
+        transform: scale(1.5) translateY(-50px);
+    }
+}
+

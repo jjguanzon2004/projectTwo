@@ -70,7 +70,7 @@ section {
     white-space: nowrap;
     border-right: 5px solid;
     animation: 
-        typing 3s steps(10, end) 3s forwards,
+        typing 3s steps(9, end) 3s forwards,
         blinking 500ms steps(10) infinite,
         centerfadeIn 1s forwards;
     animation-delay: 2s;
@@ -117,7 +117,7 @@ section {
 
 
 .two {
-    /* position: absolute;
+    position: absolute;
     opacity: 0;
     right: -100%;
     margin-top: 100px;
@@ -129,11 +129,11 @@ section {
         blinking 500ms steps(10) infinite,
         typing 3s steps(10, end) 3s forwards,
         centerfadeIn 1s forwards;
-    animation-delay: 2s; */
+    animation-delay: 2s;
 
-    position: absolute;
+    /* position: absolute;
     margin-top: 100px;
-    right: -650px;
+    right: -650px; */
 
 }
 
@@ -352,7 +352,7 @@ section {
         width: 0;
     }
     to {
-        width: 75%;
+        width: 70%;
     }
 }
 

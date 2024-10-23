@@ -26,7 +26,7 @@ section {
     margin-top: 150px;
     margin-left: 50px;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
 }
 
@@ -176,12 +176,6 @@ section {
 /* pageThree */
 
 .lineOne {
-    /* position: absolute;
-    opacity: 0%;
-    right: -100%;
-    transform: translateX(-50px);
-    animation:
-        fade-from-right 1s ease-in 1s forwards; */
     opacity: 0%;
     position: absolute;
     left: 75%;
@@ -191,21 +185,10 @@ section {
 
 
 .lineAnimation {
-    /* position: absolute;
-    right: -100%;
-    margin-top: 150px;
-    transform: translate(-50px);
-    overflow: hidden;
-    white-space: nowrap;
-    letter-spacing: 50px;
-    animation-name: closeIn;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s; */
-    /* opacity: 0; */
+    opacity: 0;
     position: absolute;
-    margin-top: 100px;
-    transform: translateX(500px);
+    margin-top: 150px;
+    transform: translateX(950px);
     overflow: hidden;
     white-space: nowrap;
     letter-spacing: 50px;
@@ -215,18 +198,18 @@ section {
 
 
 .lineThree{
-    /* opacity: 0;
+    opacity: 0;
     position: absolute;
-    right: -90%;
     margin-top: 300px;
+    transform: translateX(725px);
+    overflow: hidden;
     white-space: nowrap;
     border-right: 5px solid;
     animation: 
-        blinking 500ms steps(10) infinite,
+        blinking 500ms steps(11) infinite,
         typingRight 3s steps(18, end) 3s forwards,
         rightfadeIn 1s forwards;
-    animation-delay: 4s; */
-    opacity: 0;
+    animation-delay: 4s;
 }       
 
 .feel {
@@ -270,12 +253,18 @@ section {
 
 
 .than {
-    position: absolute;
+    /* position: absolute;
     margin-top:  400px;
     transform: translateX(1400px);
     animation: 
-        rightSlide 1s ease-in 6s forwards;
+        rightSlide 1s ease-in 6s forwards; */
+    position: absolute;
+    margin-top: 400px;
+    transform: translateX(950px);
+    animation: rightSlide 1s ease-in 6s forwards;
+    opacity: 0;
 }
+
 
 .done {
     position: absolute;
@@ -283,6 +272,11 @@ section {
     left: -240px;
     animation: 
         leftSlide 1s ease-in 7s forwards;
+}
+
+
+.lineFive {
+    color: firebrick;
 }
 
 /* pageFive */
@@ -421,9 +415,11 @@ section {
 @keyframes typing2 {
     from {
         width: 0;
+        opacity: 0;
     }
     to {
         width: 33.5%;
+        opacity: 1;
     }
 }
 
@@ -454,9 +450,11 @@ section {
 @keyframes closeIn {
     0% {
         letter-spacing: 50px;
+        opacity: 0;
     }
     100% {
         letter-spacing: 0;
+        opacity: 1;
     }
 }
 
@@ -464,9 +462,11 @@ section {
 @keyframes typingRight {
     from {
         width: 0;
+        opacity: 0;
     }
     to {
-        width: 100%;
+        width: 42%;
+        opacity: 1;
     }
 }
 
@@ -493,9 +493,11 @@ section {
 @keyframes rightSlide {
     0% {
         transform: translateX(1400px);
+        opacity: 0;
     }
     100% {
-        transform: translateX(300px);
+        transform: translateX(350px);
+        opacity: 1;
     }
 }
 

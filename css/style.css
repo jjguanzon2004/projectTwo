@@ -26,15 +26,16 @@ section {
     margin-top: 150px;
     margin-left: 50px;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     position: relative;
 }
 
 .messageRight {
    position: relative;
    height: 100vh;
-   width: 100vh;
+   width: 100%;
    text-align: right;
+   overflow-x: hidden;
 }
 
 .page5section {
@@ -107,68 +108,64 @@ section {
 /* pageTwo */
 
 .one {
+    opacity: 0;
     position: absolute;
-    opacity: 0%;
-    right: -100%;
-    transform: translateX(-50px);
+    left: 75%;
     animation:
-        fade-from-right 1s ease-in 1s forwards;
+        fade-from-right 1s ease-in 1s forwards; 
 }
 
 
 .two {
-    position: absolute;
     opacity: 0;
-    right: -100%;
+    box-sizing: border-box;
+    position: absolute;
     margin-top: 100px;
-    transform: translate(-50px);
+    transform: translateX(825px);
     overflow: hidden;
     white-space: nowrap;
     border-right: 5px solid;
     animation: 
+        typing2 3s steps(9, end) 3s forwards,
         blinking 500ms steps(10) infinite,
-        typing 3s steps(10, end) 3s forwards,
         centerfadeIn 1s forwards;
-    animation-delay: 2s;
-
-    /* position: absolute;
-    margin-top: 100px;
-    right: -650px; */
-
+    animation-delay: 2s; 
 }
 
 .three {
+    opacity: 0;
     position: absolute;
-    right: -150%;
     margin-top: 250px;
-    transform: translate(-50px);
+    transform: translateX(1150px);
+    overflow: hidden;
+    white-space: nowrap;
     animation: 
-        slide-from-right 1.5s ease-in 5s forwards;
-        
+        slide-from-right 1.5s ease-out 5s forwards;
 }
 
 
 .four {
+    opacity: 0;
     position: absolute;
-    right: -100%;
     margin-top: 400px;
-    transform: translateX(-1400px);
+    transform: translateX(950px);
     animation: 
-        slide-from-left 2s ease-out 6.5s forwards;
+        slide-from-left 2s ease-out 6s forwards;;
 }
 
 
 .five {
+    opacity: 0;
     position: absolute;
-    right: -150%;
     margin-top: 550px;
-    transform: translate(-50px);
+    transform: translateX(1150px);
+    overflow: hidden;
+    white-space: nowrap;
     animation: 
-        slide-from-right 1.5s ease-in 7s forwards;
+        slide-from-right 1.5s ease-out 7s forwards;
 }
 
 .rightDone {
-    /* background-color: aqua; */
     display: inline-block;
     color: firebrick;
     transition-property: all;
@@ -179,17 +176,22 @@ section {
 /* pageThree */
 
 .lineOne {
-    position: absolute;
+    /* position: absolute;
     opacity: 0%;
     right: -100%;
     transform: translateX(-50px);
+    animation:
+        fade-from-right 1s ease-in 1s forwards; */
+    opacity: 0%;
+    position: absolute;
+    left: 75%;
     animation:
         fade-from-right 1s ease-in 1s forwards;
 }
 
 
 .lineAnimation {
-    position: absolute;
+    /* position: absolute;
     right: -100%;
     margin-top: 150px;
     transform: translate(-50px);
@@ -199,23 +201,32 @@ section {
     animation-name: closeIn;
     animation-duration: 4s;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 2s; */
+    /* opacity: 0; */
+    position: absolute;
+    margin-top: 100px;
+    transform: translateX(500px);
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 50px;
+    animation: 
+        closeIn 4s forwards 2s;
 }
 
 
 .lineThree{
-    opacity: 0;
+    /* opacity: 0;
     position: absolute;
-    right: -100%;
+    right: -90%;
     margin-top: 300px;
-   /*  overflow: hidden; */
     white-space: nowrap;
     border-right: 5px solid;
     animation: 
         blinking 500ms steps(10) infinite,
         typingRight 3s steps(18, end) 3s forwards,
         rightfadeIn 1s forwards;
-    animation-delay: 4s;
+    animation-delay: 4s; */
+    opacity: 0;
 }       
 
 .feel {
@@ -331,6 +342,7 @@ section {
     opacity: 0;
     position: absolute;
     margin-top: 1200px;
+    color:firebrick;
     animation: 
         fade-center 1s ease-in 10s forwards
 }
@@ -352,7 +364,7 @@ section {
         width: 0;
     }
     to {
-        width: 70%;
+        width: 35%
     }
 }
 
@@ -393,14 +405,28 @@ section {
     }
 }
 
+
 @keyframes slide-from-right {
-    0% {
-        transform: translateX(100px);
+    from {
+        transform: translateX(1450px);
+        opacity: 0
     }
-    100% {
-        transform: translateX(-400px);
+    to {
+        transform: translateX(1150px);
+        opacity: 1;
     }
 }
+
+
+@keyframes typing2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 33.5%;
+    }
+}
+
 
 @keyframes slide-from-left {
     0% {
@@ -410,6 +436,18 @@ section {
         transform: translateX(-200px);
     }
 }
+
+@keyframes slide-from-left {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(950px);
+        opacity: 1;
+    }
+}
+
 
 /* pageThree keyframes */
 
@@ -422,8 +460,9 @@ section {
     }
 }
 
+
 @keyframes typingRight {
-    width {
+    from {
         width: 0;
     }
     to {
@@ -461,6 +500,7 @@ section {
 }
 
 
+
 /* keyframes pageFive */
 
 @keyframes expandPage {
@@ -490,4 +530,6 @@ section {
         transform: scale(1.5) translateY(-50px);
     }
 }
+
+@keyframes
 

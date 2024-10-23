@@ -7,12 +7,6 @@
 
 
 
-/* animation-name: 
-animation-delay: 
-animation-direction: 
-animation-duration: 
- */
-
 body{
     margin-top: 100px;
     background-color: #F4F0DB;
@@ -105,6 +99,7 @@ section {
 }
 
 
+
 /* pageTwo */
 
 .one {
@@ -172,6 +167,8 @@ section {
     transition-duration: 5s;
     transition-timing-function: ease;
 }
+
+
 
 /* pageThree */
 
@@ -253,11 +250,6 @@ section {
 
 
 .than {
-    /* position: absolute;
-    margin-top:  400px;
-    transform: translateX(1400px);
-    animation: 
-        rightSlide 1s ease-in 6s forwards; */
     position: absolute;
     margin-top: 400px;
     transform: translateX(950px);
@@ -532,6 +524,3 @@ section {
         transform: scale(1.5) translateY(-50px);
     }
 }
-
-@keyframes
-
